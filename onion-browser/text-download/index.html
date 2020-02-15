@@ -1,0 +1,13 @@
+<button id="debugButton" style="width: 200px;height:200px;">Debug</button>
+
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script>
+  function debug() {
+    const data = "hello world";
+    var blob = new Blob([data], { type: "text/plain;charset=utf-8" });
+    const filename = `debug.txt`;
+    saveAs(blob, filename);
+  }
+
+  debugButton.onmousedown = debug
+</script>
