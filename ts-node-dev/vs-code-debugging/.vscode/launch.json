@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    // works fine if you manually do `npm run debug`
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach",
+      "protocol": "inspector",
+      "port": 9229,
+      "restart": true,
+      "cwd": "${workspaceFolder}"
+    },
+    // broken, crashes whenever you change code
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "args": [
+        "run",
+        "debug"
+      ],
+      "port": 9229
+    }
+  ]
+}
